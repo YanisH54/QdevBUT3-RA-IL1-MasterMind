@@ -1,0 +1,10 @@
+.DS_Store
+.gradle/
+.idea/
+bd.sql
+build.gradle
+build/
+gradle/
+gradlew
+gradlew.bat
+settings.gradle
