@@ -7,7 +7,6 @@ import java.util.List;
 public class Reponse {
     private final String motSecret;
     private final List<Lettre> resultat = new ArrayList<>();
-    private int position;
 
     public Reponse(String mot) {
         this.motSecret = mot;
@@ -54,7 +53,7 @@ public class Reponse {
 
     // renvoie le statut du caractère (incorrect, mal placé, placé)
     private Lettre evaluationCaractere(char carCourant) {
-        position = this.motSecret.indexOf(carCourant);
+        int position = this.motSecret.indexOf(carCourant);
         if (position != -1){
             return this.resultat.get(carCourant);
         }
