@@ -12,7 +12,10 @@ public class ServiceTirageMot {
     // retourne le mot reçu du service nombre aléatoire
     public String tirageMotAleatoire() {
         int max = repository.nbMaxMots();
-		int index = nbAleatoire.next(max);
+        int index = nbAleatoire.next(max);
+        if (index == 0) {
+            index = max;
+        }
         return repository.getMotByIndex(index);
     }
 }
